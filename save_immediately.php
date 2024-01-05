@@ -1,7 +1,8 @@
 <?php 
-
 $data = json_decode(file_get_contents("php://input"));
-$conn = new mysqli("sql304.infinityfree.com", "if0_35609823", "0viQtrEXs9Mmqk", "if0_35609823_web7_db");
+
+require_once 'config.php';
+$conn = new mysqli(HOST_NAME, USER_NAME, PASSWORD, DATABASE);
 
 
 $eventNumber = $data->number;

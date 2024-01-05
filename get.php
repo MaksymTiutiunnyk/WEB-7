@@ -1,5 +1,7 @@
 <?php 
-$conn = new mysqli("sql304.infinityfree.com", "if0_35609823", "0viQtrEXs9Mmqk", "if0_35609823_web7_db");
+require_once 'config.php';
+
+$conn = new mysqli(HOST_NAME, USER_NAME, PASSWORD, DATABASE);
 
 $sql="SELECT number, server_time, local_time, message FROM MessageInfo ORDER BY number;";
 
